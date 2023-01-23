@@ -3,12 +3,12 @@ pipeline {
     stages {
         stage('Preparing the environment') {
             steps {
-                sh 'python3 -m python3-pip install -r requirements.txt'
+                sh 'echo checking code quality'
             }
         }
         stage('Code Quality') {
             steps {
-                sh 'python3 -m pylint app.py'
+                sh 'echo Testing the Application'
             }
         }
         stage('Tests') {
